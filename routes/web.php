@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -9,6 +10,8 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return view('hello');
 });
+
+route::get('/products', [ProductController::class, 'index']);
 
 // you can use these to either link to views
 
